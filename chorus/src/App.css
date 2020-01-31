@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.icon {
+  font-size: 100px;
+  display: inline;
+  vertical-align: middle;
+}
+.gallery_container {
+  display: inline;
+}
+
+.artist_container {
+  display: inline-block !important;
+}
