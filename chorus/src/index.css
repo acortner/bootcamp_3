@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#artwork {
+  height: 500px;
+  width: 500px;
+  filter: brightness(40%);
+  z-index: 1 !important;
+}
+
+#album_container {
+  margin-top: -500px;
+}
+
+#artist_name {
+  margin-top: 100px;
+  position: relative;
+  z-index: 2 !important;
+  color: white;
+  font-size: 50px;
+}
+
+#play_btn {
+  color: white;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2 !important;
+  font-size: 80px;
+}
