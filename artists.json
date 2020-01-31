@@ -1,0 +1,37 @@
+{
+    "0": {
+      "name": "Khalid",
+      "art": "images/img_name.jpg",
+      "comps": ["NONAME", "Daniel Caesar", "Frank Ocean"],
+      "description": "This can be any string of text, as long as it stays in quotes.",
+      "match_index": 35
+    },
+    "1": {
+      "name": "Khalid",
+      "art": "img_name.jpg",
+      "comps": ["NONAME", "Daniel Caesar", "Frank Ocean"],
+      "description": "This can be any string of text, as long as it stays in quotes.",
+      "match_index": 35
+    },
+    "2": {
+      "name": "Khalid",
+      "art": "img_name.jpg",
+      "comps": ["NONAME", "Daniel Caesar", "Frank Ocean"],
+      "description": "This can be any string of text, as long as it stays in quotes.",
+      "match_index": 35
+    },
+    "3": {
+      "name": "Khalid",
+      "art": "img_name.jpg",
+      "comps": ["NONAME", "Daniel Caesar", "Frank Ocean"],
+      "description": "This can be any string of text, as long as it stays in quotes.",
+      "match_index": 35
+    },
+    "4": {
+      "name": "Khalid",
+      "art": "images/img_name.jpg",
+      "comps": ["NONAME", "Daniel Caesar", "Frank Ocean"],
+      "description": "This can be any string of text, as long as it stays in quotes.",
+      "match_index": 35
+    },
+  }
