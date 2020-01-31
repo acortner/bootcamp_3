@@ -23,12 +23,10 @@ const ArtistCard = ({artist}) => {
     <div>
       <Card>
         <img id="artwork" src={"./data/images/" + artist.art}/>
-        <div id="album_container">
-          <h1 id="artist_name">{artist.name}</h1>
-          <p id="play_btn">&#9658;</p>
-          <h2 id="similar">Similar Artists</h2>
-          <div class="related_artists">{artist.comps.map(comp => <ArtistComp comp={comp}/>)}</div>
-        </div>
+        <h1 id="artist_name">{artist.name}</h1>
+        <p id="play_btn">&#9658;</p>
+        <h2 id="similar">Similar Artists</h2>
+        <div class="related_artists">{artist.comps.map(comp => <ArtistComp comp={comp}/>)}</div>
       </Card>
     </div>
   )

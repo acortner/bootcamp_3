@@ -20,12 +20,38 @@ code {
   z-index: 1 !important;
 }
 
+#artwork:hover ~ #play_btn {
+  opacity: 1 !important;
+}
+
+#artist_name:hover ~ #play_btn {
+  opacity: 1 !important;
+}
+
+#play_btn:hover{
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+#similar:hover ~ #play_btn {
+  opacity: 1 !important;
+}
+
+.related_artists:hover ~ #play_btn {
+  opacity: 1 !important;
+}
+
 #album_container {
-  margin-top: -500px;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  margin: auto;
+  margin-top: -535px;
+  z-index: 3 !important;
 }
 
 #artist_name {
-  margin-top: 80px;
+  margin-top: -450px;
   position: relative;
   z-index: 2 !important;
   color: white;
@@ -34,8 +60,12 @@ code {
 
 #play_btn {
   color: white;
-  margin-top: 50px;
+  top: 60px;
+  width: 100px;
+  margin: auto;
   position: relative;
+  opacity: 0;
+  cursor: default;
   z-index: 2 !important;
   font-size: 80px;
 }
@@ -44,12 +74,12 @@ code {
   color: white;
   z-index: 2 !important;
   position: relative;
-  margin-top: -50px;
+  top: 80px;
 }
 
 .related_artists {
   position: relative;
-  margin-top: 0px;
+  top: 80px;
   z-index: 2 !important;
   display: flex;
   justify-content: center;
