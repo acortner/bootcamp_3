@@ -55,7 +55,7 @@ const AlbumPanel = () => {
   return (
     <div class="album_grid">
       <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
-      <img class="album_img" src="./data/images/Beyoncé.jpg"/>
+      <img class="album_img" src="./data/images/Beyonce.jpg"/>
       <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
       <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
       <img class="album_img" src="./data/images/Ella_Mai.jpg"/>
@@ -71,7 +71,7 @@ const AlbumPanel = () => {
       <img class="album_img" src="./data/images/SZA.jpg"/>
       <img class="album_img" src="./data/images/Tasha_album_art.jpg"/>
       <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
-      <img class="album_img" src="./data/images/Beyoncé.jpg"/>
+      <img class="album_img" src="./data/images/Beyonce.jpg"/>
       <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
       <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
     </div>

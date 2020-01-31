@@ -15,7 +15,7 @@
     "2": {
       "name": "Tasha",
       "art": "Tasha_album_art.jpg",
-      "comps": [{"name": "SZA", "pic":"SZA.jpg"} , {"name": "Ella Mai", "pic":"Ella_Mai.jpg"}, {"name": "Beyoncé", "pic":"Beyoncé.jpg"}],
+      "comps": [{"name": "SZA", "pic":"SZA.jpg"} , {"name": "Ella Mai", "pic":"Ella_Mai.jpg"}, {"name": "Beyoncé", "pic":"Beyonce.jpg"}],
       "description": "Wistful and poetic, Tasha’s lyricism is a natural complement to her calmly soulful aura.",
       "match_index": 85
     },
