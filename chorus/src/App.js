@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from "rbx";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -11,13 +11,15 @@ const App = () => {
   const artists = Object.values(data);
   return (
     <div className="App">
-      <h1 id="banner">Artists you may like...</h1>
+      <h1 id="banner">Local artists you may like...</h1>
       <div className="gallery_container">
-        <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow"/>
         <div class="artist_container">
           {artists.map(artist => <ArtistCard artist={artist}/>)}
         </div>
-        <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow"/>
+        <div class="arrows">
+          <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow"/>
+          <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow"/>
+        </div>
       </div>
     </div>
   );
@@ -29,7 +31,9 @@ const ArtistCard = ({artist}) => {
       <Card>
         <img id="artwork" src={"./data/images/" + artist.art}/>
         <h1 id="artist_name">{artist.name}</h1>
-        <p id="play_btn">&#9658;</p>
+        <div id="play_btn">
+          <FontAwesomeIcon icon={faPlayCircle} className="far icon" id="play_btn_icon"/>
+          </div>
         <h2 id="similar">Similar Artists</h2>
         <div class="related_artists">{artist.comps.map(comp => <ArtistComp comp={comp}/>)}</div>
       </Card>

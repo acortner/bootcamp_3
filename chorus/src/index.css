@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+#banner {
+  font-size: 50px;
+}
+
 #artwork {
   object-fit: cover;
   height: 500px;
@@ -28,9 +32,11 @@ code {
   opacity: 1 !important;
 }
 
-#play_btn:hover{
-  opacity: 1 !important;
+#play_btn_icon:hover {
   cursor: pointer;
+  margin-top: -20px;
+  height: 170px;
+  width: 170px;
 }
 
 #similar:hover ~ #play_btn {
@@ -52,7 +58,9 @@ code {
 
 #artist_name {
   margin-top: -450px;
-  position: relative;
+  position: absolute;
+  width: 500px;
+  text-align: center;
   z-index: 2 !important;
   color: white;
   font-size: 50px;
@@ -60,26 +68,32 @@ code {
 
 #play_btn {
   color: white;
-  top: 60px;
-  width: 100px;
-  margin: auto;
-  position: relative;
-  opacity: 0;
+  width: 500px;
+  position: absolute;
   cursor: default;
   z-index: 2 !important;
-  font-size: 80px;
+  margin-top: -320px;
+}
+
+#play_btn_icon {
+  transition: 0.3s;
+  height: 130px;
+  width: 130px;
 }
 
 #similar {
   color: white;
   z-index: 2 !important;
-  position: relative;
-  top: 80px;
+  position: absolute;
+  margin-top: -160px;
+  width: 500px;
+  text-align: center;
 }
 
 .related_artists {
-  position: relative;
-  top: 80px;
+  position: absolute;
+  width: 500px;
+  margin-top: -120px;
   z-index: 2 !important;
   display: flex;
   justify-content: center;
@@ -104,15 +118,32 @@ code {
 }
 
 #left_arrow {
-  position: relative;
-  top: -150px;
-  left: -60px;
+  position: absolute;
   cursor: pointer;
+  margin-left: -350px;
+  width: 50px;
+  transition: 0.3s;
 }
 
 #right_arrow {
-  position: relative;
-  top: -150px;
-  left: 60px;
+  position: absolute;
   cursor: pointer;
+  margin-left: 300px;
+  width: 50px;
+  transition: 0.3s;
+}
+
+#left_arrow:hover {
+  width: 65px;
+  margin-left: -357px;
+}
+
+#right_arrow:hover {
+  width: 65px;
+  margin-left: 293px;
+}
+
+.arrows {
+  margin-top: -300px;
+  width: 100%;
 }
