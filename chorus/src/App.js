@@ -11,6 +11,7 @@ const App = () => {
   const artists = Object.values(data);
   return (
     <div className="App">
+      <AlbumPanel/>
       <h1 id="banner">Local artists you may like...</h1>
       <div className="gallery_container">
         <div class="artist_container">
@@ -46,6 +47,33 @@ const ArtistComp = ({comp}) => {
     <div class="comp_wrapper">
       <img id="comp_pic" src={"./data/images/" + comp.pic}/>
       <h3 id="comp_name">{comp.name}</h3>
+    </div>
+  )
+}
+
+const AlbumPanel = () => {
+  return (
+    <div class="album_grid">
+      <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
+      <img class="album_img" src="./data/images/Beyoncé.jpg"/>
+      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
+      <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
+      <img class="album_img" src="./data/images/Ella_Mai.jpg"/>
+      <img class="album_img" src="./data/images/Maggie_Rogers.jpg"/>
+      <img class="album_img" src="./data/images/Frankie_Cosmos.jpg"/>
+      <img class="album_img" src="./data/images/Grapetooth.jpg"/>
+      <img class="album_img" src="./data/images/Japanese_Breakfast.jpg"/>
+      <img class="album_img" src="./data/images/khalid.png"/>
+      <img class="album_img" src="./data/images/Lala_Lala_album_art.jpg"/>
+      <img class="album_img" src="./data/images/Lana_Del_Ray.jpg"/>
+      <img class="album_img" src="./data/images/Mitski.jpg"/>
+      <img class="album_img" src="./data/images/Swae_Lee.jpg"/>
+      <img class="album_img" src="./data/images/SZA.jpg"/>
+      <img class="album_img" src="./data/images/Tasha_album_art.jpg"/>
+      <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
+      <img class="album_img" src="./data/images/Beyoncé.jpg"/>
+      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
+      <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
     </div>
   )
 }
