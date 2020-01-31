@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from "rbx";
 import './App.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -11,8 +12,12 @@ const App = () => {
   return (
     <div className="App">
       <h1 id="banner">Artists you may like...</h1>
-      <div class="artist_container">
-        {artists.map(artist => <ArtistCard artist={artist}/>)}
+      <div className="gallery_container">
+        <FontAwesomeIcon icon={faChevronLeft} className="icon" />
+        <div class="artist_container">
+          {artists.map(artist => <ArtistCard artist={artist}/>)}
+        </div>
+        <FontAwesomeIcon icon={faChevronRight} className="icon" />
       </div>
     </div>
   );
