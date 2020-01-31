@@ -13,9 +13,10 @@ code {
 }
 
 #artwork {
+  object-fit: cover;
   height: 500px;
   width: 500px;
-  filter: brightness(40%);
+  filter: brightness(50%);
   z-index: 1 !important;
 }
 
@@ -24,7 +25,7 @@ code {
 }
 
 #artist_name {
-  margin-top: 100px;
+  margin-top: 80px;
   position: relative;
   z-index: 2 !important;
   color: white;
@@ -37,4 +38,37 @@ code {
   position: relative;
   z-index: 2 !important;
   font-size: 80px;
+}
+
+#similar {
+  color: white;
+  z-index: 2 !important;
+  position: relative;
+  margin-top: -50px;
+}
+
+.related_artists {
+  position: relative;
+  margin-top: 0px;
+  z-index: 2 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.comp_wrapper {
+  width: 120px;
+  margin: 0px 5px;
+}
+
+#comp_pic {
+  object-fit: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+
+#comp_name {
+  color: white;
+  margin-top: 0px;
+  font-size: 14px;
 }
