@@ -109,6 +109,14 @@ code {
   height: 80px;
   width: 80px;
   border-radius: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#comp_pic:hover {
+  height: 90px;
+  width: 90px;
+  margin-top: -5px;
 }
 
 #comp_name {
