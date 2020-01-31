@@ -102,3 +102,17 @@ code {
   margin-top: 0px;
   font-size: 14px;
 }
+
+#left_arrow {
+  position: relative;
+  top: -150px;
+  left: -60px;
+  cursor: pointer;
+}
+
+#right_arrow {
+  position: relative;
+  top: -150px;
+  left: 60px;
+  cursor: pointer;
+}

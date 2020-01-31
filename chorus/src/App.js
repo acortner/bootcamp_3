@@ -13,11 +13,11 @@ const App = () => {
     <div className="App">
       <h1 id="banner">Artists you may like...</h1>
       <div className="gallery_container">
-        <FontAwesomeIcon icon={faChevronLeft} className="icon" />
+        <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow"/>
         <div class="artist_container">
           {artists.map(artist => <ArtistCard artist={artist}/>)}
         </div>
-        <FontAwesomeIcon icon={faChevronRight} className="icon" />
+        <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow"/>
       </div>
     </div>
   );
