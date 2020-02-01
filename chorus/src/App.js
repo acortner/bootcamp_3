@@ -5,21 +5,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 const App = () => {
   const [data, setData] = useState([]);
+  const [num, setNum] = useState(0);
   useEffect(() => {
-    setData({"0": {"name": "Khalid", "art": "khalid.png", "comps": [{"name": "Anderson Paak", "pic": "Anderson_Paak.jpg"}, {"name": "Anderson Paak", "pic": "Anderson_Paak.jpg"}, {"name": "Anderson Paak", "pic": "Anderson_Paak.jpg"}], "description": "This can be any string of text, as long as it stays in quotes.", "match_index": 35}});
+    const fetchArtists = async () => {
+      const artist_response = await fetch('./data/artists.json');
+      const artist_json = await artist_response.json();
+      setData(artist_json);
+    }
+    fetchArtists();
   }, []);
   const artists = Object.values(data);
+  const artist_cards = artists.map(artist => <ArtistCard artist={artist}/>);
+  const cycleArtists = (dir) => {
+    if (dir === "right") {
+      if (num === artists.length - 1) {
+        setNum(0);
+      } else {
+        setNum(num => num + 1);
+      }
+    } else if (dir === "left") {
+      if (num === 0) {
+        setNum(artists.length - 1);
+      } else {
+        setNum(num => num - 1);
+      }
+    }
+  }
   return (
     <div className="App">
       <AlbumPanel/>
       <h1 id="banner">Local artists you may like...</h1>
       <div className="gallery_container">
         <div class="artist_container">
-          {artists.map(artist => <ArtistCard artist={artist}/>)}
+          {artist_cards[num]}
         </div>
         <div class="arrows">
-          <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow"/>
-          <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow"/>
+          <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow" onClick={() => cycleArtists("left")}/>
+          <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow" onClick={() => cycleArtists("left")}/>
         </div>
       </div>
     </div>

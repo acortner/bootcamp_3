@@ -9,7 +9,7 @@
     "1": {
       "name": "Lala Lala",
       "art": "Lala_Lala_album_art.jpg",
-      "comps": [{"name": "Lana Del Ray", "pic":"Lana_Del_Rey.jpg"} , {"name": "Ed Sheeran", "pic":"Ed_Sheeran.jpg"}, {"name": "Maggie Rogers", "pic":"Maggie_Rogers.jpg"}],
+      "comps": [{"name": "Lana Del Ray", "pic":"Lana_Del_Ray.jpg"} , {"name": "Ed Sheeran", "pic":"Ed_Sheeran.jpg"}, {"name": "Maggie Rogers", "pic":"Maggie_Rogers.jpg"}],
       "description": "Atmospheric and borderline depressive, Lala Lala’s music is far less singsong than her plucky name.",
       "match_index": 85
     },
