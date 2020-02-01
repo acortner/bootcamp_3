@@ -30,10 +30,10 @@ const ArtistCard = ({artist}) => {
   return (
     <div>
       <Card>
-        <img id="artwork" src={"./data/images/" + artist.art}/>
-        <h1 id="artist_name">{artist.name}</h1>
+        <img id="artwork" src={"./data/images/" + artist.art} alt=""/>
+        <div id="artist_name"><h1 id="artist_name_text">{artist.name}</h1></div>
         <div id="play_btn">
-          <FontAwesomeIcon icon={faPlayCircle} className="far icon" id="play_btn_icon"/>
+          <FontAwesomeIcon icon={faPlayCircle} className="icon" id="play_btn_icon"/>
           </div>
         <h2 id="similar">Similar Artists</h2>
         <div class="related_artists">{artist.comps.map(comp => <ArtistComp comp={comp}/>)}</div>
@@ -45,7 +45,7 @@ const ArtistCard = ({artist}) => {
 const ArtistComp = ({comp}) => {
   return (
     <div class="comp_wrapper">
-      <img id="comp_pic" src={"./data/images/" + comp.pic}/>
+      <img id="comp_pic" src={"./data/images/" + comp.pic} alt=""/>
       <h3 id="comp_name">{comp.name}</h3>
     </div>
   )
@@ -54,26 +54,26 @@ const ArtistComp = ({comp}) => {
 const AlbumPanel = () => {
   return (
     <div class="album_grid">
-      <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
-      <img class="album_img" src="./data/images/Beyonce.jpg"/>
-      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
-      <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
-      <img class="album_img" src="./data/images/Ella_Mai.jpg"/>
-      <img class="album_img" src="./data/images/Maggie_Rogers.jpg"/>
-      <img class="album_img" src="./data/images/Frankie_Cosmos.jpg"/>
-      <img class="album_img" src="./data/images/Grapetooth.jpg"/>
-      <img class="album_img" src="./data/images/Japanese_Breakfast.jpg"/>
-      <img class="album_img" src="./data/images/khalid.png"/>
-      <img class="album_img" src="./data/images/Lala_Lala_album_art.jpg"/>
-      <img class="album_img" src="./data/images/Lana_Del_Ray.jpg"/>
-      <img class="album_img" src="./data/images/Mitski.jpg"/>
-      <img class="album_img" src="./data/images/Swae_Lee.jpg"/>
-      <img class="album_img" src="./data/images/SZA.jpg"/>
-      <img class="album_img" src="./data/images/Tasha_album_art.jpg"/>
-      <img class="album_img" src="./data/images/Anderson_Paak.jpg"/>
-      <img class="album_img" src="./data/images/Beyonce.jpg"/>
-      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg"/>
-      <img class="album_img" src="./data/images/Ed_Sheeran.jpg"/>
+      <img class="album_img" src="./data/images/Anderson_Paak.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Beyonce.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Ed_Sheeran.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Ella_Mai.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Maggie_Rogers.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Frankie_Cosmos.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Grapetooth.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Japanese_Breakfast.jpg" alt=""/>
+      <img class="album_img" src="./data/images/khalid.png" alt=""/>
+      <img class="album_img" src="./data/images/Lala_Lala_album_art.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Lana_Del_Ray.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Mitski.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Swae_Lee.jpg" alt=""/>
+      <img class="album_img" src="./data/images/SZA.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Tasha_album_art.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Anderson_Paak.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Beyonce.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Chance_The_Rapper.jpg" alt=""/>
+      <img class="album_img" src="./data/images/Ed_Sheeran.jpg" alt=""/>
     </div>
   )
 }

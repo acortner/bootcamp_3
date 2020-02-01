@@ -1,11 +1,12 @@
-"0": {
+{
+  "0": {
       "name": "V.V. Lightbody",
       "art": "VV_Lightbody_album_art.jpg",
       "comps": [{"name": "Frankie Cosmos", "pic":"Frankie_Cosmos.jpg"} , {"name": "Mitski", "pic":"Mitski.jpg"}, {"name": "Japanese Breakfast", "pic":"Japanese_Breakfast.jpg"}],
       "description": "Like a Southern, somehow even more mellow Mitski, V.V. Lightbody exudes the quiet heat of unhappy introspection",
       "match_index": 95
     },
-    "1":
+    "1": {
       "name": "Lala Lala",
       "art": "Lala_Lala_album_art.jpg",
       "comps": [{"name": "Lana Del Ray", "pic":"Lana_Del_Rey.jpg"} , {"name": "Ed Sheeran", "pic":"Ed_Sheeran.jpg"}, {"name": "Maggie Rogers", "pic":"Maggie_Rogers.jpg"}],
@@ -29,10 +30,8 @@
     "4": {
       "name": "Grapetooth",
       "art": "Grapetooth.jpg",
-      "comps": ["Vampire Weekend", "Flume", "Karen O & Danger Mouse"],
-      "comps_img": ["Vampire_Weekend.jpg", "Flume.jpg", "Karen_O_&_Danger Mouse.jpg"],
       "comps": [{"name": "Vampire Weekend", "pic":"Vampire_Weekend.jpg"} , {"name": "Flume", "pic":"Flume.jpg"}, {"name": "Karen O & Danger Mouse", "pic":"Karen_O_&_Danger Mouse.jpg"}],
       "description": "This Chicago twosome has leveraged their syncopated playfulness into a sonic calling card.",
       "match_index": 85
-    },
+    }
   }

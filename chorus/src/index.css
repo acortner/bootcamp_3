@@ -69,8 +69,29 @@ code {
   width: 500px;
   text-align: center;
   z-index: 2 !important;
+}
+
+#artist_name_text {
   color: white;
   font-size: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  width: max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+#artist_name_text:after {
+  display:block;
+  content: '';
+  border-bottom: 5px solid white;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin:  0% 50%;
+}
+
+#artist_name_text:hover:after {
+  transform: scaleX(1);
 }
 
 #play_btn {
