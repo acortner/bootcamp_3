@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Card } from "rbx";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faPlayCircle, faPauseCircle } from '@fortawesome/free-solid-svg-icons'
 const App = () => {
   const [data, setData] = useState([]);
   const [num, setNum] = useState(0);
+  const [playing, setPlaying] = useState(false);
   useEffect(() => {
     const fetchArtists = async () => {
       const artist_response = await fetch('./data/artists.json');
@@ -15,7 +16,7 @@ const App = () => {
     fetchArtists();
   }, []);
   const artists = Object.values(data);
-  const artist_cards = artists.map(artist => <ArtistCard artist={artist}/>);
+  const artist_cards = artists.map(artist => <ArtistCard artist={artist} playing={playing} setPlaying={setPlaying}/>);
   const cycleArtists = (dir) => {
     if (dir === "right") {
       if (num === artists.length - 1) {
@@ -30,6 +31,7 @@ const App = () => {
         setNum(num => num - 1);
       }
     }
+    setPlaying(false);
   }
   return (
     <div className="App">
@@ -41,25 +43,36 @@ const App = () => {
         </div>
         <div class="arrows">
           <FontAwesomeIcon icon={faChevronLeft} className="icon" id="left_arrow" onClick={() => cycleArtists("left")}/>
-          <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow" onClick={() => cycleArtists("left")}/>
+          <FontAwesomeIcon icon={faChevronRight} className="icon" id="right_arrow" onClick={() => cycleArtists("right")}/>
         </div>
       </div>
     </div>
   );
 }
 
-const ArtistCard = ({artist}) => {
+const ArtistCard = ({artist, playing, setPlaying}) => {
   return (
     <div>
       <Card>
         <img id="artwork" src={"./data/images/" + artist.art} alt=""/>
         <div id="artist_name"><h1 id="artist_name_text">{artist.name}</h1></div>
         <div id="play_btn">
-          <FontAwesomeIcon icon={faPlayCircle} className="icon" id="play_btn_icon"/>
-          </div>
+          <PlayPause playing={playing} setPlaying={setPlaying}/>
+        </div>
         <h2 id="similar">Similar Artists</h2>
         <div class="related_artists">{artist.comps.map(comp => <ArtistComp comp={comp}/>)}</div>
       </Card>
+    </div>
+  )
+}
+
+const PlayPause = ({playing, setPlaying}) => {
+  const changePlay = () => {
+    setPlaying(!playing);
+  }
+  return (
+    <div>
+      {playing ? <FontAwesomeIcon icon={faPauseCircle} className="icon" id="play_btn_icon" onClick={() => changePlay()}/> : <FontAwesomeIcon icon={faPlayCircle} className="icon" id="play_btn_icon" onClick={() => changePlay()}/>}
     </div>
   )
 }
